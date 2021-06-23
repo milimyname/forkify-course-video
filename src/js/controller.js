@@ -79,13 +79,11 @@ const controlAddBookmark = function () {
   // 1. Add/remove bookmark
   if (!model.state.recipe.bookmarked) model.addBookmark(model.state.recipe);
   else model.deleteBookmark(model.state.recipe.id);
-  // console.log(model.state.recipe);
 
   // 2. Update recipe view
   recipeView.update(model.state.recipe);
 
   // 3. Render bookmarks
-
   bookmarksView.render(model.state.bookmarks);
 };
 
@@ -134,7 +132,6 @@ const init = function () {
   paginationView.addHandlerClick(controlPagination);
   addRecipeView.addHandlerUpload(controlAddRecipe);
 
-  newFeature();
 };
 
 init();
